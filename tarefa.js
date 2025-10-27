@@ -20,8 +20,8 @@ function apaga(elemento){
 
 function renderTask(task){
     const li = criarLi();
-    li.innerText = task.text;
-    li.setAttribute('data-id', task.id);
+    li.innerText = task.texto || task.text || '';
+    li.setAttribute('data-id', task.id || task.ID || '');
     const apagaBtn = criarApagar();
     li.appendChild(apagaBtn);
     tarefa.appendChild(li);
